@@ -1,0 +1,37 @@
+@host = http://localhost: 3000
+@baseUrl = ({host})/api/v1
+@contentType=application/json
+
+###
+POST {{baseUrl}}/books
+Content-Type: {{contentType}}
+   
+
+Content-Type: {{contentType}}
+    {"title": "Java como Programar",
+    "subtitle": "Aprenda Java em 21 dias",
+    "author": "H. M. Deitel",
+    "genre": "Livro Técnico",
+    "cover": "https://example.com/java-book-cover.jpg"
+    }
+
+###
+GET {{baseUrl}}/books
+Content-Type: {{contentType}}
+
+###
+GET {{baseUrl}}/books/id
+Content-Type: {{contentType}}
+
+###
+PUT {{baseUrl}}/books/id
+Content-Type: {{contentType}}
+    {
+    "subtitle": "Python 3.12",
+    "author": "Kasongo",
+    
+    }
+
+###
+DELETE {{baseUrl}}/books/id
+Content-Type: {{contentType}}
